@@ -7,4 +7,6 @@ LABEL org.opencontainers.image.source=https://github.com/lptr/esp-idf-clang-dock
 RUN $IDF_PATH/tools/idf_tools.py install esp-clang && \
     $IDF_PATH/tools/idf_tools.py install-python-env
 
-RUN $IDF_TOOLS_PATH/python_env/*/bin/pip install esp-idf-sbom
+RUN $IDF_TOOLS_PATH/python_env/*/bin/pip install \
+    esp-idf-sbom \
+    spdx-tools
