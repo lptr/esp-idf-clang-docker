@@ -5,5 +5,6 @@ FROM ${BASE_IMAGE}
 LABEL org.opencontainers.image.source=https://github.com/lptr/esp-idf-clang-docker
 
 RUN $IDF_PATH/tools/idf_tools.py install esp-clang && \
-    $IDF_PATH/tools/idf_tools.py install-python-env && \
-    $IDF_PYTHON_ENV_PATH/bin/pip install esp-idf-sbom
+    $IDF_PATH/tools/idf_tools.py install-python-env
+
+RUN $IDF_TOOLS_PATH/python_env/*/bin/pip install esp-idf-sbom
