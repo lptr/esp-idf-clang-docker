@@ -25,7 +25,8 @@ jobs:
         run: |
           docker build \
             --build-arg BASE_IMAGE=espressif/idf:${{ github.event.inputs.base_tag }} \
-            -t ${{ github.repository_owner }}/esp-idf-clang:${{ github.event.inputs.base_tag }} .
+            -t ${{ github.repository_owner }}/esp-idf-clang:${{ github.event.inputs.base_tag }} \
+            .
 
       - name: Push image
         run: |
