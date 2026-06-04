@@ -9,4 +9,5 @@ RUN $IDF_PATH/tools/idf_tools.py install esp-clang && \
 
 RUN $IDF_TOOLS_PATH/python_env/*/bin/pip install \
     esp-idf-sbom \
-    spdx-tools
+    spdx-tools \
+    git+https://github.com/matus-chochlik/ctcache.git
